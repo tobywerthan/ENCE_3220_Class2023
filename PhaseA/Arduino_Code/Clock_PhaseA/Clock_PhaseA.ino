@@ -20,12 +20,17 @@ unsigned char table[]=
 {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c
 ,0x39,0x5e,0x79,0x71,0x00};
 
+// variables for keeping track of each digits value
 volatile unsigned char count1 = 0;
 volatile unsigned char count2 = 3;
 volatile unsigned char count3 = 0;
 volatile unsigned char count4 = 0;
 
-
+/**
+ * @brief Setup
+ * @param 
+ * @return  
+ */
 void setup() {
   // LEDs Pins
   pinMode(RED_LED, OUTPUT);
@@ -73,22 +78,31 @@ void setup() {
   disp_on(12);
   disp_on(13);
 }
-
+/**
+ * @brief Turn On Buzzer
+ * @param
+ * @return
+ */
 void Active_Buzzer()
 {
   buzzerActive = true;
   unsigned char i;
   unsigned char sleep_time = 1; // ms
   
-  // for(i=0;i<100;i++)
-  //  {
-  //   digitalWrite(BUZZER,HIGH);
-  //   delay(sleep_time);//wait for 1ms
-  //   digitalWrite(BUZZER,LOW);
-  //   delay(sleep_time);//wait for 1ms
-  //   }
+  for(i=0;i<100;i++)
+   {
+    digitalWrite(BUZZER,HIGH);
+    delay(sleep_time);//wait for 1ms
+    digitalWrite(BUZZER,LOW);
+    delay(sleep_time);//wait for 1ms
+    }
 }
-
+/**
+ * @brief Shifts bits through shift register 
+ * @param num
+ * @param digit  
+ * @return  
+ */
 void Display(unsigned char num, int digit)
 {
   disp_on(digit);
@@ -96,7 +110,11 @@ void Display(unsigned char num, int digit)
   shiftOut(DATA, CLOCK, MSBFIRST, table[num]);
   digitalWrite(LATCH, HIGH);
 }
-
+/**
+ * @brief Displays each digit 
+ * @param 
+ * @return  
+ */
 void Display_Numbers()
 { 
   Display(count1, 10); 
@@ -107,16 +125,22 @@ void Display_Numbers()
   delay(2);
   Display(count4, 13);
   delay(2);
-  // Display(count3, 12); 
-  // Display(count4, 13);
 }
-
+/**
+ * @brief Turns on a specific digit
+ * @param digit
+ * @return  
+ */
 void disp_on(int digit)
 {
   disp_off();
   digitalWrite(digit, LOW);
 }
-
+/**
+ * @brief Turns off all digits
+ * @param 
+ * @return  
+ */
 void disp_off()
 {
    digitalWrite(DIGIT_1, HIGH);
@@ -124,14 +148,22 @@ void disp_off()
    digitalWrite(DIGIT_3, HIGH);
    digitalWrite(DIGIT_4, HIGH);
 }
-
+/**
+ * @brief Resets the timer to 30 seconds
+ * @param
+ * @return  
+ */
 void ResetTime(){
   count1 = 0;
   count2 = 3;
   count3 = 0;
   count4 = 0;
 }
-
+/**
+ * @brief Button 1 interrupt handler (increments the count)
+ * @param
+ * @return  
+ */
 void Button_1_ISR()
 {
   unsigned int buttonState = 0;  // variable for reading the pushbutton status
@@ -161,7 +193,11 @@ void Button_1_ISR()
     count1++;
   }
 }
-
+/**
+ * @brief Button 2 interrupt handler (pauses the timer, also acts as a reset)
+ * @param digit
+ * @return  
+ */
 void Button_2_ISR()
 { 
   unsigned int buttonState = 0;  // variable for reading the pushbutton status
@@ -176,7 +212,11 @@ void Button_2_ISR()
 
   start = !start;
 }
-
+/**
+ * @brief Timer 1 interrupt handler (decrements the timer)
+ * @param digit
+ * @return  
+ */
 ISR(TIMER1_COMPA_vect) // timer compare interrupt service routine
 {
   if(start){
@@ -200,9 +240,13 @@ ISR(TIMER1_COMPA_vect) // timer compare interrupt service routine
   }
 
 }
-
+/**
+ * @brief Loop
+ * @param
+ * @return  
+ */
 void loop() {
-  // IDLE  
+    
   if(count1 == 0 && count2 == 0 && count3 == 0 && count4 == 0){
     Active_Buzzer();
   }
