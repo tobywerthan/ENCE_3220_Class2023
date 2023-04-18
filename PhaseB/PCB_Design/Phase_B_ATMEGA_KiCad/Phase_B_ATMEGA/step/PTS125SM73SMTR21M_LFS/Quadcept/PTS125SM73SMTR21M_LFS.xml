@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/17134815/1113658/2.50/4/2/Switch/-->
+<quadcept_library>
+  <setting unit="mil" />
+  <textstyle name="Default" height="47.244094488189" strokewidth="7.8740157480315" charwidth="47.244094488189" />
+  <textstyle name="Dimension" height="19.6850393700787" strokewidth="0" charwidth="19.6850393700787" />
+  <textstyle name="H127W0635TH00762" height="50" strokewidth="3" charwidth="25" />
+  <textstyle name="H15W15TH02" height="59.0551181102362" strokewidth="7.8740157480315" charwidth="59.0551181102362" />
+  <padstyle name="r200_150" surface="True" plated="False" isvia="False" nopaste="False" nomask="True" complex="False" holesize="0">
+    <padshape layer="TOP" shape="rectangle" width="59.055118110235" height="78.740157480314" />
+    <padshape layer="TOP_SOLDER_MASK" shape="rectangle" width="66.929133858267" height="86.614173228345" />
+    <padshape layer="TOP_SOLDER_PASTE" shape="rectangle" width="59.055118110235" height="78.740157480314" />
+  </padstyle>
+  <footprint name="PTS125SM73SMTR21MLFS" originx="0" originy="0" pickpointx="0" pickpointy="0">
+    <pcbpin number="1" name="A1" style="r200_150" originx="-281.49606299212" originy="98.425196850392" rotation="90" />
+    <pcbpin number="2" name="B1" style="r200_150" originx="281.49606299212" originy="98.425196850392" rotation="90" />
+    <pcbpin number="3" name="C1" style="r200_150" originx="-281.49606299212" originy="-98.425196850392" rotation="90" />
+    <pcbpin number="4" name="D1" style="r200_150" originx="281.49606299212" originy="-98.425196850392" rotation="90" />
+    <line layer="TOP_ASSEMBLY" originx="-236.22047244094" originy="236.22047244094" endx="236.22047244094" endy="236.22047244094" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="236.22047244094" originy="236.22047244094" endx="236.22047244094" endy="-236.22047244094" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="236.22047244094" originy="-236.22047244094" endx="-236.22047244094" endy="-236.22047244094" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="-236.22047244094" originy="-236.22047244094" endx="-236.22047244094" endy="236.22047244094" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="-360.23622047244" originy="275.5905511811" endx="360.23622047244" endy="275.5905511811" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="360.23622047244" originy="275.5905511811" endx="360.23622047244" endy="-275.5905511811" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="360.23622047244" originy="-275.5905511811" endx="-360.23622047244" endy="-275.5905511811" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="-360.23622047244" originy="-275.5905511811" endx="-360.23622047244" endy="275.5905511811" width="3.9370078740157" />
+    <line layer="TOP_SILKSCREEN" originx="-236.22047244094" originy="157.48031496063" endx="-236.22047244094" endy="236.22047244094" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-236.22047244094" originy="236.22047244094" endx="236.22047244094" endy="236.22047244094" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="236.22047244094" originy="236.22047244094" endx="236.22047244094" endy="157.48031496063" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-236.22047244094" originy="-157.48031496063" endx="-236.22047244094" endy="-236.22047244094" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-236.22047244094" originy="-236.22047244094" endx="236.22047244094" endy="-236.22047244094" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="236.22047244094" originy="-236.22047244094" endx="236.22047244094" endy="-157.48031496063" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-236.22047244094" originy="-39.370078740157" endx="-236.22047244094" endy="39.370078740157" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="236.22047244094" originy="-39.370078740157" endx="236.22047244094" endy="39.370078740157" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-342.51968503937" originy="98.425196850392" endx="-342.51968503937" endy="98.425196850392" width="3.9370078740157" />
+    <arc layer="TOP_SILKSCREEN" originx="-340.55118110236" originy="98.425196850392" startangle="180.0" sweepangle="180.0" radius="1.9685039370078" width="3.9370078740157" />
+    <line layer="TOP_SILKSCREEN" originx="-338.58267716535" originy="98.425196850392" endx="-338.58267716535" endy="98.425196850392" width="3.9370078740157" />
+    <arc layer="TOP_SILKSCREEN" originx="-340.55118110236" originy="98.425196850392" startangle=".0" sweepangle="180.0" radius="1.9685039370078" width="3.9370078740157" />
+  </footprint>
+  <symbol name="PTS125SM73SMTR21M_LFS" originx="0" originy="0">
+    <line originx="200" originy="100" endx="1000" endy="100" width="0" />
+    <line originx="1000" originy="-200" endx="1000" endy="100" width="0" />
+    <line originx="1000" originy="-200" endx="200" endy="-200" width="0" />
+    <line originx="200" originy="100" endx="200" endy="-200" width="0" />
+    <sympin number="1" originx="200" originy="0" rotation="180" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="230" originy="0" style="Default" rotation="0" justify="left" flipped="False" hidden="False" data="NO_1" />
+      <text name="pindes" originx="140" originy="20" style="Default" rotation="0" justify="lowerright" flipped="False" hidden="False" data="A1" />
+    </sympin>
+    <sympin number="2" originx="1000" originy="0" rotation="0" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="970" originy="0" style="Default" rotation="0" justify="right" flipped="False" hidden="False" data="NO_2" />
+      <text name="pindes" originx="1060" originy="20" style="Default" rotation="0" justify="lowerleft" flipped="False" hidden="False" data="B1" />
+    </sympin>
+    <sympin number="3" originx="200" originy="-100" rotation="180" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="230" originy="-100" style="Default" rotation="0" justify="left" flipped="False" hidden="False" data="COM_1" />
+      <text name="pindes" originx="140" originy="-80" style="Default" rotation="0" justify="lowerright" flipped="False" hidden="False" data="C1" />
+    </sympin>
+    <sympin number="4" originx="1000" originy="-100" rotation="0" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="970" originy="-100" style="Default" rotation="0" justify="right" flipped="False" hidden="False" data="COM_2" />
+      <text name="pindes" originx="1060" originy="-80" style="Default" rotation="0" justify="lowerleft" flipped="False" hidden="False" data="D1" />
+    </sympin>
+  </symbol>
+  <component name="PTS125SM73SMTR21M_LFS" designatorprefix="S" height="287.40157480315" footprint="PTS125SM73SMTR21MLFS">
+    <comppin designator="A1" sympin="1" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="NO_1" />
+    <comppin designator="B1" sympin="2" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="NO_2" />
+    <comppin designator="C1" sympin="3" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="COM_1" />
+    <comppin designator="D1" sympin="4" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="COM_2" />
+    <attached_symbol gate="1" name="PTS125SM73SMTR21M_LFS" />
+    <pinmap designator="A1" footprintpin="1" />
+    <pinmap designator="B1" footprintpin="2" />
+    <pinmap designator="C1" footprintpin="3" />
+    <pinmap designator="D1" footprintpin="4" />
+    <text name="Datasheet" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="https://www.ckswitches.com/media/1462/pts125.pdf" />
+    <text name="Description" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="Tactile Switch SPST-NO Top Actuated Surface Mount" />
+    <text name="Mouser Part Number" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="611-PTS125M73SMTRLFS" />
+    <text name="Mouser Price/Stock" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="https://www.mouser.co.uk/ProductDetail/CK/PTS125SM73SMTR21M-LFS?qs=t7xnP681wgVp4NpaUUvA%252Bw%3D%3D" />
+    <text name="Manufacturer_Name" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="C & K COMPONENTS" />
+    <text name="Manufacturer_Part_Number" originx="1050" originy="200" style="Default" rotation="0" justify="left" flipped="False" hidden="False" data="PTS125SM73SMTR21M LFS" />
+  </component>
+</quadcept_library>

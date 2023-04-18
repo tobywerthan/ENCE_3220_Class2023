@@ -1,0 +1,16 @@
+.PTS526_SM08_SMTR2_LFS :1 ;Tactile Switches 50mA 12VDC, 5.2x5.2mm, 0.8mm H, 160gf, G leads, No ground pin, no actuator
+PTS526SM08SMTR2LFS
+*STM S
+*NGS
+*PLB 1="COM_1" 2="COM_2" 3="NO_1" 4="NO_2"
+*MXP 4
+*DFN PTS526_SM08_SMTR2_LFS
+~!Mouser Part Number (611-PTS526SM08SMTR2L)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/CK/PTS526-SM08-SMTR2-LFS?qs=UXgszm6BlbFgRZzlfGAMFg%3D%3D)
+~!Manufacturer_Name (C & K COMPONENTS)
+~!Manufacturer_Part_Number (PTS526 SM08 SMTR2 LFS)
+~!Link Datasheet (https://www.arrow.com/en/products/pts526-sm08-smtr2-lfs/ck)
+~!Height (0.95mm)
+~!3D_Model (PTS526_SM08_SMTR2_LFS)
+PTS526_SM08_SMTR2_LFS
+1.1!U 2.1!U 3.1!U 4.1!U 

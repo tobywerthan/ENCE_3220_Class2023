@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "PTS125SM73SMTR21MLFS"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "PTS125SM73SMTR21MLFS")
+        (spec "default")
+    )
+)

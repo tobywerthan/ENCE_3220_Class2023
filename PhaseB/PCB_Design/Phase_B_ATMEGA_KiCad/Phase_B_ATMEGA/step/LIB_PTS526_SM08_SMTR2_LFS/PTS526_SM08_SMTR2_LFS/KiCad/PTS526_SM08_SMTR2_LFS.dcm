@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP PTS526_SM08_SMTR2_LFS
+D Tactile Switches 50mA 12VDC, 5.2x5.2mm, 0.8mm H, 160gf, G leads, No ground pin, no actuator
+K
+F https://www.arrow.com/en/products/pts526-sm08-smtr2-lfs/ck
+$ENDCMP
+#
+#End Doc Library

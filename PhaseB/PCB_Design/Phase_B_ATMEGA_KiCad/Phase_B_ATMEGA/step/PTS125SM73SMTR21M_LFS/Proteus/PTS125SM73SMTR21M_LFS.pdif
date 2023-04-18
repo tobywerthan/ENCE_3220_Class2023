@@ -1,0 +1,138 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "PTS125SM73SMTR21M_LFS"
+   (description "Tactile Switch SPST-NO Top Actuated Surface Mount")
+   (family "SWI")
+   (package "PTS125SM73SMTR21MLFS")
+   (attribute "Datasheet Link" "https://www.ckswitches.com/media/1462/pts125.pdf")
+   (attribute "Geometry.Height" "7.3mm")
+   (attribute "Mouser Part Number" "611-PTS125M73SMTRLFS")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/CK/PTS125SM73SMTR21M-LFS?qs=t7xnP681wgVp4NpaUUvA%252Bw%3D%3D")
+   (attribute "Manufacturer_Name" "C & K COMPONENTS")
+   (attribute "Manufacturer_Part_Number" "PTS125SM73SMTR21M LFS")
+   (gate
+    (symbol "PTS125SM73SMTR21M_LFS")
+    (pin "NO_1" A1 PS)
+    (pin "NO_2" B1 PS)
+    (pin "COM_1" C1 PS)
+    (pin "COM_2" D1 PS)
+   )
+  )
+  (symbol "PTS125SM73SMTR21M_LFS"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1000 100) (pt 1000 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "PTS125SM73SMTR21MLFS"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -6 6)
+      (pt 6 6)
+      (pt 6 -6)
+      (pt -6 -6)
+      (pt -6 6))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -9.15 7)
+      (pt 9.15 7)
+      (pt 9.15 -7)
+      (pt -9.15 -7)
+      (pt -9.15 7))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -6 4)
+      (pt -6 6)
+      (pt 6 6)
+      (pt 6 4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -6 -4)
+      (pt -6 -6)
+      (pt 6 -6)
+      (pt 6 -4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -6 -1)
+      (pt -6 1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 6 -1)
+      (pt 6 1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -8.7 2.5)
+      (arc (pt -8.700 2.500) (pt -8.700 2.450) (pt -8.600 2.550) (start 180.0) (sweep 180.0))
+      (pt -8.6 2.5)
+      (arc (pt -8.600 2.500) (pt -8.700 2.450) (pt -8.600 2.550) (start 180.0) (sweep .0))
+      (pt -8.7 2.5))))
+   (leg A1 (pt -7.150 2.500) (padstack 0))
+   (leg B1 (pt 7.150 2.500) (padstack 0))
+   (leg C1 (pt -7.150 -2.500) (padstack 0))
+   (leg D1 (pt 7.150 -2.500) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.500 2.000 0 0 0.000))
+   )
+   (model "PTS125SM73SMTR21M_LFS.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

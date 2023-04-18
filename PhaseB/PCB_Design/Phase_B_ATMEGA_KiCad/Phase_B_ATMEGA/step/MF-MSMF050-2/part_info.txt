@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=MF-MSMF050-2
+PartCategory=Fuse
+PackageCategory=Other
+PinCount=2
+Version=3.1
+Released=2017-01-30 11:52:35
+Downloaded=2023-04-17 03:30:56
+3D=Y

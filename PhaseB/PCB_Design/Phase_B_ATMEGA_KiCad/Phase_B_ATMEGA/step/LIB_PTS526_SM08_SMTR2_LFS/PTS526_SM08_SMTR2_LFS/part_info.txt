@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=PTS526 SM08 SMTR2 LFS
+PartCategory=Switch
+PackageCategory=Other
+PinCount=4
+Version=1.4
+Released=2019-12-18 15:19:54
+Downloaded=2023-04-14 02:46:18
+3D=Y

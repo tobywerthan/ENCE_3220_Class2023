@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "PTS125SM73SMTR21M_LFS"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2023-04-15-10:33:10)
+    (mountForm default
+        (footprintRef "PTS125SM73SMTR21MLFS")
+        (spec "System")
+    )
+)

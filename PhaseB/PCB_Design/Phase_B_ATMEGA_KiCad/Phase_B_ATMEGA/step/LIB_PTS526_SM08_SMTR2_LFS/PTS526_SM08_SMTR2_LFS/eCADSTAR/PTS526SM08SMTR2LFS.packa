@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "PTS526_SM08_SMTR2_LFS"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-12-18-15:19:54)
+    (mountForm default
+        (footprintRef "PTS526SM08SMTR2LFS")
+        (spec "System")
+    )
+)

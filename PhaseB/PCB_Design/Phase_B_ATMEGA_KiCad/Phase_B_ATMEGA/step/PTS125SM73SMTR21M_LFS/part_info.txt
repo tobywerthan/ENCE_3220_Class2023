@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=PTS125SM73SMTR21M LFS
+PartCategory=Switch
+PackageCategory=Other
+PinCount=4
+Version=2.4
+Released=2023-04-15 10:33:10
+Downloaded=2023-04-17 03:27:39
+3D=Y
