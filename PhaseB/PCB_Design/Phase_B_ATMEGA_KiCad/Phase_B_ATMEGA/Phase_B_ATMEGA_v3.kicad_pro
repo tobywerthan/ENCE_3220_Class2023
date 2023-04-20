@@ -173,6 +173,8 @@
       ],
       "track_widths": [
         0.0,
+        0.0,
+        0.2032,
         0.2032,
         0.254,
         0.3048,
@@ -446,7 +448,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "step/ATMEGA_Kitchen_Timer.step",
+      "step": "../../../Notes/Phase_B_PCB.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
