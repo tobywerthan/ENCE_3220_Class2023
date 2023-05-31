@@ -62,8 +62,7 @@ The main concern when designing the PCB was to allocate enough space for the com
 ![PCB_3D_Render_With_Components](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/7a041e28-2be2-4a8f-9380-b9b233bb2609)
 
 ## Software Development
-Both the LCD display and the temperature sensor require delays in units of microseconds in order to read their data correctly. Unfortunately, the delay provided by the HAL library has a minimum of 1ms. To achieve a delay in microseconds, the following code was implemented in the library for both sensors:
-
+Both the LCD display and the temperature sensor require delays in units of microseconds in order to function correctly. Unfortunately, the delay provided by the HAL library has a minimum of 1 millisecond. To achieve a delay in microseconds, the following code is implemented in the library for both sensors:
 ```
 void microDelay (uint16_t us)
 {
@@ -71,5 +70,8 @@ void microDelay (uint16_t us)
 	while (__HAL_TIM_GET_COUNTER(&timer) < us);
 }
 ```
+The timers used for the micro delays are timer1 and timer2 sourced by the internal clock of the STM32. Both timers share a prescaler value of 83 and a counter period of 4095. The LCD library provided functions for clearing the display, moving the cursor on the display, and writing strings to the display. Every loop execution, the LCD displays the temperature on the top row, and then the humidity on the bottom row. The LCD needs to clear every loop execution as the values update, this forces the loop to implement a delay so that the value can display befor being cleared. Because the LCD displays requires a delay, the rate at which the temperature sensor is read needs to be faster than that delay. In this case, the delay for the lcd was 1 second. Therefore, a timer driven interrupt is implemented using timer6. This interrupt occurs every half second, which is plenty fast enough considering the display rate of the LCD display. Each time the interrupt occurs, the temperature and humidity values are read and stored. A flow chart of the program can be seen below:
+
+![Flowchart](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/c28a7c41-6b64-42db-b7cd-be5866f3170b)
 
 ## Future Iterations
