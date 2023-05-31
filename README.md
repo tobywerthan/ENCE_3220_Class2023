@@ -36,6 +36,8 @@ The schematic for this system contains three modules. The modules are categorize
 
 #### LCD Display
 
+![image](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/8fba1ba2-90f5-4654-acfb-c5c67ea91418)
+
 #### DHT11
 
 #### STM32F4
