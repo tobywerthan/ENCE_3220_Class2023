@@ -29,7 +29,19 @@ Key components for this system include the LCD1602A display, the DHT11 temperatu
 
 
 ## STM32 Shield Design
+The goal for this project was to develop a shield for the STM32F4 that implements the designed system. 
 
+### Schematic
+The schematic for this system contains three modules. The modules are categorized by component (ie. LCD display, DHT11, STM32F4). 
+
+#### LCD Display
+
+#### DHT11
+
+#### STM32F4
+
+
+### PCB
 
 ## Software Development
 
