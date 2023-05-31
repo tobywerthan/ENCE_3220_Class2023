@@ -62,5 +62,14 @@ The main concern when designing the PCB was to allocate enough space for the com
 ![PCB_3D_Render_With_Components](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/7a041e28-2be2-4a8f-9380-b9b233bb2609)
 
 ## Software Development
+Both the LCD display and the temperature sensor require delays in units of microseconds in order to read their data correctly. Unfortunately, the delay provided by the HAL library has a minimum of 1ms. To achieve a delay in microseconds, the following code was implemented in the library for both sensors:
+
+```
+void microDelay (uint16_t us)
+{
+	__HAL_TIM_SET_COUNTER(&timer, 0);
+	while (__HAL_TIM_GET_COUNTER(&timer) < us);
+}
+```
 
 ## Future Iterations
