@@ -27,6 +27,7 @@ Key components for this system include the LCD1602A display, the DHT11 temperatu
 
 ## Build Prototype
 
+![IMG_0870](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/7569cad7-967c-473b-aba5-546d0cd26ed9)
 
 ## STM32 Shield Design
 The goal for this project was to develop a shield for the STM32F4 that implements the designed system. 
