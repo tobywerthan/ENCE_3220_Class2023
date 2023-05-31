@@ -7,6 +7,7 @@ The requirements for this temperature monitor aren't complex. The system must be
 - Utilize the STM32F407G Discovery Board
 - Software developed in the STM32CubeIDE
 ## System Design
+The design for this system includes the STM32F407G Discovery Board, an lcd display, and a temperature sensor. A block diagram of key components and their pin connections to the STM32. 
 
 ## Components Selection
 
