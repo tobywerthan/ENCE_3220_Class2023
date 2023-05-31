@@ -21,9 +21,9 @@ Key components for this system include the LCD1602A display, the DHT11 temperatu
 | U2 | DHT11 | Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical_SMD_Pin1Right |
 | U1 | LCD1602A | Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical_SMD_Pin1Right |
 | J1 & J2 | STM32F4 Discovery Board | 2x Connector_PinSocket_2.54mm:PinSocket_2x25_P2.54mm_Vertical |
-| Paragraph   | Text        | Text        |
-| Paragraph   | Text        | Text        |
-| Paragraph   | Text        | Text        |
+| RV1 | 1000Ω | Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical_SMD_Pin1Right |
+| R1 | 910Ω | Resistor_SMD:R_0603_1608Metric |
+| C1 | 1mF | Capacitor_SMD:C_0603_1608Metric |
 
 ## Build Prototype
 
