@@ -48,7 +48,7 @@ The schematic for this system contains three modules. The modules are categorize
 ![image](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/5bc7af28-0ada-4f12-b00e-fd8c3a3ebd46)
 
 ### PCB
-The main concern when designing the PCB was to allocate enough space for the components once they are connected to the pin sockets. This was managed through some crude measurements as well as trial and error. 
+This shield was designed so that the componenets used during prototyping could be directly placed on the PCB using pin socket connectors instead of surface mounting components. The main concern when designing the PCB was to allocate enough space for the components once they are connected to the pin sockets. This was managed through some crude measurements as well as trial and error. 
 
 #### KiCad
 
