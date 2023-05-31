@@ -76,3 +76,5 @@ The timers used for the micro delays are timer1 and timer2 sourced by the intern
 ![Flowchart](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/c28a7c41-6b64-42db-b7cd-be5866f3170b)
 
 ## Future Iterations
+
+While this project is practical, this kind of device already exists. A way to improve this design would be to use the ESP8266 microchip to send alerts to a certain device once the temperature has reached a specified threshold. Additionally, adding a UVB sensor would give the user more information about the enviornment. Powering the system with a battery would allow it to be portable. Because the device is meant to detect high temperatures and UVB, charging the battery through solar might not be a bad idea either. 
