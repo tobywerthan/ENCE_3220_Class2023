@@ -16,10 +16,14 @@ The design for this system includes the STM32F407G Discovery Board, an lcd displ
 ## Components Selection
 Key components for this system include the LCD1602A display, the DHT11 temperature and humidity sensor, and the STM32F4 discovery board. A full list of the required components can be seen in the table below. 
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| References  | Value       | Footprint   |
+| ----------- | ----------- | ----------- |
+| U2          | DHT11       | Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical_SMD_Pin1Right |
+| Paragraph   | Text        | Text        |
+| Paragraph   | Text        | Text        |
+| Paragraph   | Text        | Text        |
+| Paragraph   | Text        | Text        |
+| Paragraph   | Text        | Text        |
 
 ## Build Prototype
 
