@@ -47,8 +47,20 @@ The schematic for this system contains three modules. The modules are categorize
 ![image](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/5bc7af28-0ada-4f12-b00e-fd8c3a3ebd46)
 
 ### PCB
+The main concern when designing the PCB was to allocate enough space for the components once they are connected to the pin sockets. This was managed through some crude measurements as well as trial and error. 
+
+#### KiCad
+
+![PCB](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/00986a72-d583-4c47-842b-e8ab2e83f396)
+
+#### 3D Render
+
+![PCB_3D_Render](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/721ff4a9-9a1c-46c5-99fe-5079a9a311f5)
+
+#### 3D Render with Components 
+
+![PCB_3D_Render_With_Components](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/7a041e28-2be2-4a8f-9380-b9b233bb2609)
 
 ## Software Development
-
 
 ## Future Iterations
