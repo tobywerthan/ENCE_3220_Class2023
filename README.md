@@ -40,8 +40,11 @@ The schematic for this system contains three modules. The modules are categorize
 
 #### DHT11
 
+![image](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/18c32273-0055-41af-b8e5-ca45f9912bb7)
+
 #### STM32F4
 
+![image](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/5bc7af28-0ada-4f12-b00e-fd8c3a3ebd46)
 
 ### PCB
 
