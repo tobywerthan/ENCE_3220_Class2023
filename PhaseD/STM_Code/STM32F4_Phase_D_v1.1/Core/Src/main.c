@@ -21,8 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "LCD1602.h"
-#include "DHT11.h"
+#include "LCD1602.h" // LCD Display Library
+#include "DHT11.h" // Temperature Sesnor Library
 #include "stdio.h"
 #include "string.h"
 /* USER CODE END Includes */
@@ -39,8 +39,8 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define DHT11_PORT GPIOC
-#define DHT11_PIN GPIO_PIN_4
+#define DHT11_PORT GPIOC // Defining temperature sensor port
+#define DHT11_PIN GPIO_PIN_4 // Defining temperature sensor pin
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -64,20 +64,21 @@ static void MX_TIM6_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-volatile unsigned char isr_flag_1 = 0;
-int row=0;
-int col=0;
+volatile unsigned char gIsrFlag1 = 0; // interrupt flag for reading the temperature sensor
 
-uint8_t TFI = 0;
-uint8_t TFD = 0;
-uint8_t RHI, RHD, TCI, TCD, SUM;
+int gLcdRow=0; // current row for the lcd display cursor
+int gLcdCol=0; // current column for the lcd display cursor
 
-float RH = 0;
-float tCelsius = 0;
-float tFahrenheit = 0;
+uint8_t gTFI = 0; // Fahrenheit integral
+uint8_t gTFD = 0; // Fahrenheit decimal
+uint8_t gRHI, gRHD, gTCI, gTCD, gSUM; // check sum values
 
-char tempStr[20] = "";
-char humidStr[20] = "";
+float gRH = 0; // humidity value
+float gCelsius = 0; // temperature value (celsius)
+float gFahrenheit = 0; // temperature value (Fahrenheit)
+
+char gTempStr[20] = ""; // character array that stores the current temperature value
+char gHumidStr[20] = ""; // character array that stores the current humidity value
 
 /* USER CODE END 0 */
 
@@ -112,14 +113,14 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start(&htim1);
-  HAL_TIM_Base_Start(&htim2);
-  HAL_TIM_Base_Start_IT(&htim6);;
-	lcd_init();
-	lcd_put_cur(0, 0);
-	lcd_send_string("Initializing...");
-	HAL_Delay(3000);
-	lcd_clear();
+  HAL_TIM_Base_Start(&htim1); // Micro delay timer for LCD display
+  HAL_TIM_Base_Start(&htim2); // Micro delay timer for temperature sensor
+  HAL_TIM_Base_Start_IT(&htim6); // Interrupt timer for reading the temperature sensor
+	lcd_init(); // initialize the lcd
+	lcd_put_cur(0, 0); // places the cursor on the lcd at position (0, 0)
+	lcd_send_string("Initializing..."); // writes the string to the lcd display
+	HAL_Delay(3000); // delay for 3 seconds
+	lcd_clear(); // clear the display
 
   /* USER CODE END 2 */
 
@@ -130,37 +131,38 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(isr_flag_1 == 1){
-		  isr_flag_1 = 0;
-		  if(DHT11_Start())
+	  if(gIsrFlag1 == 1){ // occurs on timer6 interrupt
+		  gIsrFlag1 = 0; // reset the flag
+		  if(DHT11_Start()) // verify communication with the sensor
 		  {
-			RHI = DHT11_Read(); // Relative humidity integral
-			RHD = DHT11_Read(); // Relative humidity decimal
-			TCI = DHT11_Read(); // Celsius integral
-			TCD = DHT11_Read(); // Celsius decimal
-			SUM = DHT11_Read(); // Check sum
-			if (RHI + RHD + TCI + TCD == SUM)
+			gRHI = DHT11_Read(); // Relative humidity integral
+			gRHD = DHT11_Read(); // Relative humidity decimal
+			gTCI = DHT11_Read(); // Celsius integral
+			gTCD = DHT11_Read(); // Celsius decimal
+			gSUM = DHT11_Read(); // Check gSUM
+			if (gRHI + gRHD + gTCI + gTCD == gSUM) // check sum
 			{
-			  // Can use RHI and TCI for any purposes if whole number only needed
-			  tCelsius = (float)TCI + (float)(TCD/10.0);
-			  tFahrenheit = tCelsius * 9/5 + 32;
-			  RH = (float)RHI + (float)(RHD/10.0);
-			  // Can use tCelsius, tFahrenheit and RH for any purposes
-			  TFI = tFahrenheit;  // Fahrenheit integral
-			  TFD = tFahrenheit*10-TFI*10; // Fahrenheit decimal
+			  // Can use gRHI and gTCI for any purposes if whole number only needed
+			  gCelsius = (float)gTCI + (float)(gTCD/10.0);
+			  gFahrenheit = gCelsius * 9/5 + 32;
+			  gRH = (float)gRHI + (float)(gRHD/10.0);
+			  // Can use gCelsius, gFahrenheit and gRH for any purposes
+			  gTFI = gFahrenheit;  // Fahrenheit integral
+			  gTFD = gFahrenheit*10-gTFI*10; // Fahrenheit decimal
 			}
 		  }
 	  }
-	  sprintf(tempStr, "%f", tFahrenheit);
-	  sprintf(humidStr, "%f", RH);
-	  lcd_clear();
-	  lcd_put_cur(0, 0);
-	  lcd_send_string("T: ");
-	  lcd_send_string(tempStr);
-	  lcd_put_cur(1, 0);
-	  lcd_send_string("H: ");
-	  lcd_send_string(humidStr);
-	  HAL_Delay(1000);
+
+	  sprintf(gTempStr, "%f", gFahrenheit); // change the temperature string to the current reading`
+	  sprintf(gHumidStr, "%f", gRH); // change the humidity string to the current reading`
+	  lcd_clear(); // clear the display
+	  lcd_put_cur(0, 0); // places the cursor on the lcd at position (0, 0)
+	  lcd_send_string("T: "); // writes the string to the lcd display
+	  lcd_send_string(gTempStr); // writes the current temperature string to the lcd display
+	  lcd_put_cur(1, 0); // places the cursor on the next row
+	  lcd_send_string("H: "); // writes the string to the lcd display
+	  lcd_send_string(gHumidStr); // writes the current humidity string to the lcd display
+	  HAL_Delay(1000); // delay for 1 second
   }
   /* USER CODE END 3 */
 }
@@ -403,9 +405,10 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+// Timer interrupt callback
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	if(htim == &htim6){
-		isr_flag_1 = 1;
+	if(htim == &htim6){ // if interrupt for timer 6
+		gIsrFlag1 = 1; // set the interrupt flag to 1
 	}
 }
 /* USER CODE END 4 */
