@@ -11,7 +11,7 @@ The requirements for this temperature monitor aren't complex. The system must be
 ## System Design
 The design for this system includes the STM32F407G Discovery Board, an lcd display, and a temperature sensor. A block diagram of key components and their pin connections to the STM32F4. 
 
-![BlockDiagram](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/67a1513a-c1a0-4130-bfb1-48bb881af1c0)
+![BlockDiagram](https://github.com/tobywerthan/ENCE_3220_Class2023/assets/55803740/9897b5c9-fc0e-41f9-b31e-4a299957a8f5)
 
 ## Components Selection
 Key components for this system include the LCD1602A display, the DHT11 temperature and humidity sensor, and the STM32F4 discovery board. A full list of the required components can be seen in the table below. 
